@@ -1,0 +1,656 @@
+
+/* =========================================
+   PIZZARO — RED & GOLD REDESIGN
+   Add-on stylesheet for the existing project
+========================================= */
+
+:root {
+  --pizza-red: #a91f19;
+  --pizza-red-dark: #250907;
+  --pizza-burgundy: #3b0b09;
+  --pizza-gold: #ffb900;
+  --pizza-gold-light: #ffd35a;
+  --pizza-cream: #fff4e8;
+  --pizza-muted: #cdb9ae;
+  --pizza-card: #42100d;
+  --pizza-border: rgba(255, 190, 60, 0.2);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--pizza-red-dark);
+  color: var(--pizza-cream);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  transition: color 180ms ease, opacity 180ms ease;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Shared page backgrounds */
+
+.home,
+.menu-page,
+.cart-page,
+.checkout-page,
+.orders-page,
+.pizza-details-page,
+.login-page,
+.register-page {
+  background-color: var(--pizza-red-dark);
+  color: var(--pizza-cream);
+}
+
+.menu-page,
+.cart-page,
+.checkout-page,
+.orders-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      ellipse at top left,
+      rgba(169, 31, 25, 0.28),
+      transparent 50%
+    ),
+    var(--pizza-red-dark);
+}
+
+/* Navigation */
+
+.topbar,
+.ph-nav {
+  background: rgba(37, 9, 7, 0.96);
+  border-bottom: 1px solid var(--pizza-border);
+  color: var(--pizza-cream);
+}
+
+.topbar nav a,
+.ph-nav-links a {
+  color: var(--pizza-muted);
+}
+
+.topbar nav a:hover,
+.ph-nav-links a:hover,
+.ph-nav-links .ph-active-link {
+  color: var(--pizza-gold);
+}
+
+.logo,
+.ph-logo {
+  color: var(--pizza-gold);
+}
+
+/* General headings */
+
+.page-header h1,
+.cart-header h1,
+.hero h1,
+.ph-hero h1,
+.ph-section-heading h2 {
+  color: var(--pizza-cream);
+}
+
+.page-header p,
+.hero-text,
+.ph-hero-description {
+  color: var(--pizza-muted);
+}
+
+.eyebrow,
+.section-label,
+.ph-eyebrow,
+.ph-small-kicker {
+  color: var(--pizza-gold);
+}
+
+/* Main buttons */
+
+.order-button,
+.add-button,
+.confirm-add,
+.checkout-button,
+.ph-button-primary,
+.ph-card-order {
+  background: linear-gradient(
+    135deg,
+    var(--pizza-gold-light),
+    var(--pizza-gold)
+  );
+  color: #35100a;
+  border: 1px solid rgba(255, 220, 120, 0.55);
+  border-radius: 12px;
+  font-weight: 800;
+  box-shadow: 0 5px 18px rgba(255, 185, 0, 0.12);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    filter 180ms ease;
+}
+
+.order-button:hover,
+.add-button:hover,
+.confirm-add:hover,
+.checkout-button:hover,
+.ph-button-primary:hover,
+.ph-card-order:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.06);
+  box-shadow: 0 8px 24px rgba(255, 185, 0, 0.2);
+}
+
+/* Home page hero */
+
+.hero {
+  background:
+    radial-gradient(
+      ellipse at 75% 40%,
+      rgba(169, 31, 25, 0.48),
+      transparent 50%
+    ),
+    var(--pizza-red-dark);
+}
+
+.hero-content {
+  color: var(--pizza-cream);
+}
+
+.hero-visual {
+  border-radius: 28px;
+}
+
+.pizza-glow {
+  background: radial-gradient(
+    circle,
+    rgba(255, 185, 0, 0.16),
+    transparent 70%
+  );
+}
+
+/* Existing premium home page */
+
+.pizzaro-home {
+  background: var(--pizza-red-dark);
+  color: var(--pizza-cream);
+}
+
+.pizzaro-home section {
+  color: inherit;
+}
+
+.ph-announcement {
+  background: #180605;
+  color: var(--pizza-gold-light);
+}
+
+.ph-hero {
+  background:
+    radial-gradient(
+      ellipse at 80% 25%,
+      rgba(169, 31, 25, 0.42),
+      transparent 45%
+    ),
+    linear-gradient(145deg, #260907, #430e0a 60%, #210706);
+  color: var(--pizza-cream);
+}
+
+.ph-hero h1 em,
+.ph-intro h2 em,
+.ph-ingredients h2 em {
+  color: var(--pizza-gold);
+}
+
+.ph-hero-image-halo {
+  background: radial-gradient(
+    circle,
+    rgba(255, 185, 0, 0.2),
+    transparent 68%
+  );
+}
+
+.ph-hero-image-frame,
+.ph-card-image,
+.ph-featured-image,
+.ph-gallery-item {
+  border-color: var(--pizza-border);
+}
+
+.ph-intro,
+.ph-signatures,
+.ph-featured,
+.ph-ingredients,
+.ph-gallery,
+.ph-story {
+  background: var(--pizza-red-dark);
+  color: var(--pizza-cream);
+}
+
+.ph-values,
+.ph-pizza-card,
+.ph-ingredient {
+  background: var(--pizza-card);
+  border: 1px solid var(--pizza-border);
+  border-radius: 18px;
+}
+
+.ph-pizza-card {
+  overflow: hidden;
+  transition: transform 200ms ease, border-color 200ms ease;
+}
+
+.ph-pizza-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 185, 0, 0.55);
+}
+
+.ph-card-image {
+  overflow: hidden;
+}
+
+.ph-pizza-title-row h3,
+.ph-value h3,
+.ph-ingredient h3 {
+  color: var(--pizza-cream);
+}
+
+.ph-pizza-category,
+.ph-rating,
+.ph-value-number,
+.ph-ingredient-symbol {
+  color: var(--pizza-gold);
+}
+
+.ph-pizza-info > p,
+.ph-intro-copy p,
+.ph-value p,
+.ph-ingredient p,
+.ph-featured-description {
+  color: var(--pizza-muted);
+}
+
+.ph-footer {
+  background: #180605;
+  color: var(--pizza-cream);
+  border-top: 1px solid var(--pizza-border);
+}
+
+/* Menu page */
+
+.menu-page .page-header,
+.cart-page .cart-header {
+  color: var(--pizza-cream);
+}
+
+.back-link,
+.view-menu,
+.ph-outline-link,
+.ph-underlined-link {
+  color: var(--pizza-gold);
+}
+
+.pizza-card {
+  background: linear-gradient(155deg, #50130f, #300b09);
+  border: 1px solid var(--pizza-border);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.16);
+  transition: transform 200ms ease, border-color 200ms ease;
+}
+
+.pizza-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 185, 0, 0.55);
+}
+
+.pizza-info h2,
+.pizza-info h3,
+.pizza-title {
+  color: var(--pizza-cream);
+}
+
+.pizza-category,
+.pizza-price {
+  color: var(--pizza-gold);
+}
+
+.pizza-description {
+  color: var(--pizza-muted);
+}
+
+.pizza-image {
+  background: #270806;
+}
+
+/* Pizza size selection */
+
+.size-picker {
+  color: var(--pizza-cream);
+}
+
+.size-option {
+  background: #300b09;
+  border: 1px solid var(--pizza-border);
+  color: var(--pizza-cream);
+  border-radius: 12px;
+  transition: border-color 180ms ease, background 180ms ease;
+}
+
+.size-option:hover,
+.size-circle.selected {
+  background: rgba(255, 185, 0, 0.12);
+  border-color: var(--pizza-gold);
+}
+
+.size-option.selected {
+  background: rgba(255, 185, 0, 0.12);
+  border-color: var(--pizza-gold);
+}
+
+.size-name,
+.size-price {
+  color: inherit;
+}
+
+/* Quantity controls */
+
+.quantity-control,
+.cart-quantity {
+  color: var(--pizza-cream);
+}
+
+.quantity-button,
+.cart-quantity button {
+  background: #50130f;
+  color: var(--pizza-gold);
+  border: 1px solid var(--pizza-border);
+  border-radius: 9px;
+}
+
+.quantity-button:hover,
+.cart-quantity button:hover {
+  background: #711b14;
+  border-color: var(--pizza-gold);
+}
+
+/* Cart page */
+
+.cart-page {
+  color: var(--pizza-cream);
+}
+
+.cart-count {
+  color: var(--pizza-gold);
+}
+
+.cart-layout {
+  gap: 24px;
+}
+
+.cart-section,
+.cart-summary {
+  background: linear-gradient(155deg, #47110d, #2e0908);
+  border: 1px solid var(--pizza-border);
+  border-radius: 18px;
+  color: var(--pizza-cream);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.cart-section-heading h2 {
+  color: var(--pizza-cream);
+}
+
+.cart-section-heading span,
+.cart-item-details p {
+  color: var(--pizza-muted);
+}
+
+.cart-item {
+  border-color: var(--pizza-border);
+}
+
+.cart-item-details h3,
+.cart-item-right strong {
+  color: var(--pizza-cream);
+}
+
+.remove-item {
+  color: #ff9a8e;
+}
+
+.remove-item:hover {
+  color: #ff6255;
+}
+
+.cooking-request,
+.other-tip-input {
+  background: #250907;
+  border: 1px solid var(--pizza-border);
+  border-radius: 10px;
+  color: var(--pizza-cream);
+}
+
+.cooking-request:focus,
+.other-tip-input:focus {
+  outline: 2px solid rgba(255, 185, 0, 0.4);
+  border-color: var(--pizza-gold);
+}
+
+.instruction-option {
+  background: #300b09;
+  border: 1px solid var(--pizza-border);
+  border-radius: 10px;
+  color: var(--pizza-cream);
+}
+
+.instruction-option:hover,
+.instruction-option.selected {
+  border-color: var(--pizza-gold);
+  background: rgba(255, 185, 0, 0.1);
+}
+
+.tip-options button {
+  background: #300b09;
+  color: var(--pizza-cream);
+  border: 1px solid var(--pizza-border);
+  border-radius: 9px;
+}
+
+.tip-options button:hover,
+.tip-options button.selected {
+  background: rgba(255, 185, 0, 0.13);
+  border-color: var(--pizza-gold);
+}
+
+.summary-row {
+  color: var(--pizza-muted);
+}
+
+.summary-total,
+.summary-total strong {
+  color: var(--pizza-gold);
+  border-color: var(--pizza-border);
+}
+
+/* Checkout page */
+
+.checkout-page {
+  color: var(--pizza-cream);
+}
+
+.checkout-page h1,
+.checkout-page h2,
+.checkout-page h3 {
+  color: var(--pizza-cream);
+}
+
+.checkout-page p,
+.checkout-page label {
+  color: var(--pizza-muted);
+}
+
+.checkout-page input,
+.checkout-page textarea,
+.checkout-page select {
+  background: #250907;
+  border: 1px solid var(--pizza-border);
+  border-radius: 10px;
+  color: var(--pizza-cream);
+}
+
+.checkout-page input:focus,
+.checkout-page textarea:focus,
+.checkout-page select:focus {
+  outline: 2px solid rgba(255, 185, 0, 0.3);
+  border-color: var(--pizza-gold);
+}
+
+/* Orders page */
+
+.orders-page {
+  color: var(--pizza-cream);
+}
+
+.orders-page h1,
+.orders-page h2,
+.orders-page h3 {
+  color: var(--pizza-cream);
+}
+
+.orders-page p {
+  color: var(--pizza-muted);
+}
+
+.orders-page button {
+  border-radius: 10px;
+}
+
+/* Pizza detail page */
+
+.pizza-details-page {
+  background: var(--pizza-red-dark);
+  color: var(--pizza-cream);
+}
+
+.pizza-details-page h1,
+.pizza-details-page h2,
+.pizza-details-page h3 {
+  color: var(--pizza-cream);
+}
+
+.pizza-details-page p {
+  color: var(--pizza-muted);
+}
+
+/* Authentication pages */
+
+.login-page,
+.register-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(169, 31, 25, 0.3),
+      transparent 42%
+    ),
+    var(--pizza-red-dark);
+}
+
+.login-page input,
+.register-page input,
+.login-page select,
+.register-page select {
+  background: #250907;
+  color: var(--pizza-cream);
+  border: 1px solid var(--pizza-border);
+  border-radius: 10px;
+}
+
+.login-page input:focus,
+.register-page input:focus {
+  border-color: var(--pizza-gold);
+  outline: 2px solid rgba(255, 185, 0, 0.2);
+}
+
+/* Shared panels and form elements */
+
+input,
+textarea,
+select {
+  accent-color: var(--pizza-gold);
+}
+
+::selection {
+  background: var(--pizza-gold);
+  color: #250907;
+}
+
+:focus-visible {
+  outline-color: var(--pizza-gold);
+}
+
+/* Responsive adjustments */
+
+@media (max-width: 800px) {
+  .cart-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .ph-hero {
+    overflow: hidden;
+  }
+
+  .ph-pizza-grid,
+  .ph-gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .cart-section,
+  .cart-summary {
+    border-radius: 14px;
+  }
+
+  .pizza-card {
+    border-radius: 14px;
+  }
+
+  .ph-pizza-grid,
+  .ph-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .order-button,
+  .add-button,
+  .confirm-add,
+  .checkout-button,
+  .ph-button-primary {
+    min-height: 44px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
